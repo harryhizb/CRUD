@@ -6,9 +6,9 @@ const taskRouter = express.Router();
 
 // Tasks Routes
 // Post Task
-taskRouter.post('/postTask', isLoggedIn.isLoggedIn ,taskController.postTask);
+taskRouter.post('/postTask',taskController.postTask);
 // Get all Tasks
-taskRouter.get('/getTasks', taskController.readTasks);
+taskRouter.get('/getTasks', taskController.getTasks);
 // Get single Task by id
 taskRouter.get('/getTask/:id', taskController.singleTask); 
 // Update Task by Id
